@@ -27,8 +27,6 @@ export default {
           author: this.author,
           message: this.message,
         });
-        this.author = '';
-        this.message = '';
       }
     }
 }

@@ -14,6 +14,9 @@
           <div>
             <a href="#" @click.prevent="removeComment(indexRender)"> DELETE </a>
           </div>
+          <div>
+            <a href="#" @click.prevent="editComment"> EDIT </a>
+          </div>
         </div>
       </div>
     </div>
@@ -33,10 +36,16 @@ export default {
   },
   methods: {
     addComment(comment) {
-      this.comments.push(comment);
+      localStorage.setItem('comments', this.comments.push(comment))
+      
     },
     removeComment(index) {
       this.comments.splice(index, 1);
+    },
+    editComment() {
+      localStorage.getItem(this.comments.map((showAllComments) => {
+        return showAllComments;
+      }))
     },
   },
   computed: {
