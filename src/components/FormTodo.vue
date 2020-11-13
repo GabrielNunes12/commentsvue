@@ -27,6 +27,14 @@ export default {
           author: this.author,
           message: this.message,
         });
+        this.cleanForm()
+      },
+      cleanForm(){
+        this.author = '',
+        this.message = ''
+      },
+      useLocalStorageToAchieve() {
+        window.localStorage.setItem('comments', this.author, this.message)
       }
     }
 }

@@ -37,15 +37,9 @@ export default {
   methods: {
     addComment(comment) {
       localStorage.setItem('comments', this.comments.push(comment))
-      
     },
     removeComment(index) {
       this.comments.splice(index, 1);
-    },
-    editComment() {
-      localStorage.getItem(this.comments.map((showAllComments) => {
-        return showAllComments;
-      }))
     },
   },
   computed: {
@@ -53,8 +47,11 @@ export default {
       return this.comments.map(comment => ({
         ...comment,
         author: comment.author.trim() === '' ? 'Annonymous' : comment.author
-      }))
-    }
-  }
-};
+      }));
+    },
+    getLocalStorageAchieved(){
+      return window.localStorage.getItem('comments', this.author, this.message) 
+    },
+  },
+}
 </script>
