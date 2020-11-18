@@ -1,4 +1,5 @@
 # commentsvue
+Comment vue is a project using Vuetify/Vuejs to know more and increse my ability in the "front-end world"
 
 ## Project setup
 ```
