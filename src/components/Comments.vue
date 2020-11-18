@@ -1,6 +1,6 @@
 <template>
-  <div class="comentario">
-    <div class="mainForm">
+  <v-col class="mb-4">
+    <v-col class="mb-3">
       <h1> Comments </h1>
       <hr>
       <FormTodo @add-todo="addComment"> </FormTodo>
@@ -19,8 +19,8 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </v-col>
+  </v-col>
 </template>
 
 <script>
